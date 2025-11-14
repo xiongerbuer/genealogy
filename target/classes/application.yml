@@ -1,0 +1,25 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /Genealogy
+swagger:
+  production : true
+  # 是否开启swagger
+  enabled: true
+  # 请求前缀
+  pathMapping: /dev-api
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/genealogy?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none
+      database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+logging:
+  level:
+    com.genealogy: debug
